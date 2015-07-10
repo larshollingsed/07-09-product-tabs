@@ -1,0 +1,20 @@
+<table id="see_all_products">
+  <tr>
+    <th>
+      ID
+    </th>
+    <th>
+      Name
+    </th>
+  </tr>
+  <% Product.all.each do |product| %>
+    <tr>
+      <td>
+        <%= product.id %>
+      </td>
+      <td>
+        <%= product.product_name %>
+      </td>
+    </tr>
+  <% end %>
+</table>
