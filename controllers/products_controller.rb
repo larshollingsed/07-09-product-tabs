@@ -1,4 +1,4 @@
-get "/add_new_product" do
+get "/add_product_form" do
   erb :"products/add_product_form"
 end
 
