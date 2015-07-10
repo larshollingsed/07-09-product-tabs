@@ -4,7 +4,7 @@
 
 <% Product.all.each do |product| %>
   <p><%= product.product_name %></p>
-  <div id="product<%= product.id %>">
+  <div id="product<%= product.id %>" class="tab_container_template">
     <div id="product<%= product.id %>_tabs">
       <div id="product<%= product.id %>general_info_tab" class="tab_template">
         General Info
@@ -15,8 +15,10 @@
       <div id="product<%= product.id %>where_to_buy_tab" class="tab_template">
         Where To Buy
       </div>
+      <div style="clear: both">
+      </div>
     </div>
-    <div id="product<%= product.id %>_content">
+    <div id="product<%= product.id %>_content" class="content_container_template">
       <div id="product<%= product.id %>general_info" class="content_template">
         <%= product.general_info %>
       </div>
@@ -26,6 +28,8 @@
       <div id="product<%= product.id %>where_to_buy" class="hidden content_template">
         <%= product.where_to_buy %>
       </div>
+    </div>
+    <div style="clear: both">
     </div>
   </div>
 <% end %>

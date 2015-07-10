@@ -10,3 +10,22 @@ html {
   position: absolute;
   visibility: hidden;
 }
+
+.tab_template {
+  border: 1px grey solid;
+  float: left;
+  width: 25%;
+  background-color: rgb(188, 232, 255);
+}
+
+.content_template {
+  
+}
+
+.tab_container_template {
+  position: relative;
+}
+
+.content_container_template {
+  border: 1px grey solid;
+}
