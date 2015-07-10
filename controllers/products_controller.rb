@@ -10,3 +10,13 @@ end
 get "/see_all_products" do
   erb :"products/see_all_products"
 end
+
+get "/delete_product_form" do
+  erb :"products/delete_product_form"
+end
+
+get "/delete_product_confirm" do
+  @deleted_product = Product.find(params["product"]["id"])
+  @deleted_product.delete
+  erb :"home"
+end

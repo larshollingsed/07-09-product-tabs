@@ -1,7 +1,13 @@
 <% if @new_product %>
   <h4>
     <%= @new_product.product_name %> has been added
-  </h4>
+  </h4>  
+<% end %>
+
+<% if @deleted_product %>
+  <h4>
+    <%= @deleted_product.product_name %> has been deleted
+  </h4>  
 <% end %>
 
 <h1>
