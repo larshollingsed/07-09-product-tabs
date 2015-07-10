@@ -10,6 +10,12 @@
   </h4>  
 <% end %>
 
+<% if @product_modified %>
+  <h4>
+    <%= @product_modified.product_name %> has been modified
+  </h4>  
+<% end %>
+
 <h1>
   Well to Larz's fancy Product manager
 </h1>

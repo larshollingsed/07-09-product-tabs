@@ -29,3 +29,9 @@ get "/modify_product_form2" do
   @product = Product.find(params["product"]["id"])
   erb :"products/modify_product_form2"
 end
+
+get "/product_modify_confirm" do
+  @product_modified = Product.new(params["product"])
+  @product_modified.save
+  erb :"home"
+end
