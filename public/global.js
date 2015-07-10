@@ -1,26 +1,36 @@
-document.getElementById("product1general_info_tab").onclick = show_product1_general_info;
-
-function show_product1_general_info() {
-  document.getElementById("product1general_info").className = "content_template";
-  document.getElementById("product1technical_specs").className = "content_template hidden";
-  document.getElementById("product1where_to_buy").className = "content_template hidden";
+for (counter = 0; counter < document.getElementsByClassName("general_tab").length; counter++) {
+  document.getElementsByClassName("general_tab")[counter].onclick = show_product_general_info;  
 }
 
-document.getElementById("product1technical_specs_tab").onclick = show_product1_technical_specs;
 
-function show_product1_technical_specs() {
-  document.getElementById("product1general_info").className = "content_template hidden";
-  document.getElementById("product1technical_specs").className = "content_template";
-  document.getElementById("product1where_to_buy").className = "content_template hidden";
+function show_product_general_info() {
+  this.parentNode.parentNode.childNodes[3].childNodes[1].className = "content_template";
+    this.parentNode.parentNode.childNodes[3].childNodes[3].className = "content_template hidden";
+  this.parentNode.parentNode.childNodes[3].childNodes[5].className = "content_template hidden";
 }
 
-document.getElementById("product1where_to_buy_tab").onclick = show_product1_where_to_buy;
-
-function show_product1_where_to_buy() {
-  document.getElementById("product1general_info").className = "content_template hidden";
-  document.getElementById("product1technical_specs").className = "content_template hidden";
-  document.getElementById("product1where_to_buy").className = "content_template";
+for (counter = 0; counter < document.getElementsByClassName("tech_tab").length; counter++) {
+  document.getElementsByClassName("tech_tab")[counter].onclick = show_product_technical_specs;  
 }
+
+
+function show_product_technical_specs() {
+  this.parentNode.parentNode.childNodes[3].childNodes[1].className = "content_template hidden";
+  this.parentNode.parentNode.childNodes[3].childNodes[3].className = "content_template";
+  this.parentNode.parentNode.childNodes[3].childNodes[5].className = "content_template hidden";
+}
+
+for (counter = 0; counter < document.getElementsByClassName("buy_tab").length; counter++) {
+  document.getElementsByClassName("buy_tab")[counter].onclick = show_product_where_to_buy;  
+}
+
+function show_product_where_to_buy() {
+  this.parentNode.parentNode.childNodes[3].childNodes[1].className = "content_template hidden";
+  this.parentNode.parentNode.childNodes[3].childNodes[3].className = "content_template hidden";
+  this.parentNode.parentNode.childNodes[3].childNodes[5].className = "content_template";
+}
+
+
 
 // var number_of_products = 5;
 // var gen_info;

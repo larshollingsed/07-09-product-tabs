@@ -5,27 +5,27 @@
 <% Product.all.each do |product| %>
   <p><%= product.product_name %></p>
   <div id="product<%= product.id %>" class="tab_container_template">
-    <div id="product<%= product.id %>_tabs">
-      <div id="product<%= product.id %>general_info_tab" class="tab_template">
+    <div id="product_tabs<%= product.id %>">
+      <div id="product_general_info_tab<%= product.id %>" class="tab_template general_tab">
         General Info
       </div>
-      <div id="product<%= product.id %>technical_specs_tab" class="tab_template">
+      <div id="product_technical_specs_tab<%= product.id %>" class="tab_template tech_tab">
         Technical Specs
       </div>
-      <div id="product<%= product.id %>where_to_buy_tab" class="tab_template">
+      <div id="product_where_to_buy_tab<%= product.id %>" class="tab_template buy_tab">
         Where To Buy
       </div>
       <div style="clear: both">
       </div>
     </div>
-    <div id="product<%= product.id %>_content" class="content_container_template">
-      <div id="product<%= product.id %>general_info" class="content_template">
+    <div id="product_content<%= product.id %>" class="content_container_template">
+      <div id="product_general_info<%= product.id %>" class="content_template">
         <%= product.general_info %>
       </div>
-      <div id="product<%= product.id %>technical_specs" class="hidden content_template">
+      <div id="product_technical_specs<%= product.id %>" class="hidden content_template">
         <%= product.technical_specs %>
       </div>
-      <div id="product<%= product.id %>where_to_buy" class="hidden content_template">
+      <div id="product_where_to_buy<%= product.id %>" class="hidden content_template">
         <%= product.where_to_buy %>
       </div>
     </div>
