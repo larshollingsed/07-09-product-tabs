@@ -20,3 +20,12 @@ get "/delete_product_confirm" do
   @deleted_product.delete
   erb :"home"
 end
+
+get "/modify_product_form1" do
+  erb :"products/modify_product_form1"
+end
+
+get "/modify_product_form2" do
+  @product = Product.find(params["product"]["id"])
+  erb :"product/modify_product_form2"
+end

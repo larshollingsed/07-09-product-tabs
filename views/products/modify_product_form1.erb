@@ -1,0 +1,29 @@
+<form action="/modify_product_form2">
+  <table id="modify_product">
+    <tr>
+      <th>
+        Modify?
+      </th>
+      <th>
+        ID
+      </th>
+      <th>
+        Name
+      </th>
+    </tr>
+    <% Product.all.each do |product| %>
+      <tr>
+        <td>
+          <label for="<%= product.id %>">
+          <input type="radio" value="<%= product.id %>" id="<%= product.id %>" name="product[id]">
+        <td>
+          <%= product.id %>
+        </td>
+        <td>
+          <%= product.product_name %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+  <input type="submit">
+</form>
