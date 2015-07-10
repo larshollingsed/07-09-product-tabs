@@ -5,3 +5,8 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+
+.hidden {
+  position: absolute;
+  visibility: hidden;
+}

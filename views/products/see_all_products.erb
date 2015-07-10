@@ -1,20 +1,31 @@
-<table id="see_all_products">
-  <tr>
-    <th>
-      ID
-    </th>
-    <th>
-      Name
-    </th>
-  </tr>
-  <% Product.all.each do |product| %>
-    <tr>
-      <td>
-        <%= product.id %>
-      </td>
-      <td>
-        <%= product.product_name %>
-      </td>
-    </tr>
-  <% end %>
-</table>
+<h2>
+  Viewing All Products
+</h2>
+
+<% Product.all.each do |product| %>
+  <p><%= product.product_name %></p>
+  <div id="product<%= product.id %>">
+    <div id="product<%= product.id %>_tabs">
+      <div id="product<%= product.id %>general_info_tab" class="tab_template">
+        General Info
+      </div>
+      <div id="product<%= product.id %>technical_specs_tab" class="tab_template">
+        Technical Specs
+      </div>
+      <div id="product<%= product.id %>where_to_buy_tab" class="tab_template">
+        Where To Buy
+      </div>
+    </div>
+    <div id="product<%= product.id %>_content">
+      <div id="product<%= product.id %>general_info" class="content_template">
+        <%= product.general_info %>
+      </div>
+      <div id="product<%= product.id %>technical_specs" class="hidden content_template">
+        <%= product.technical_specs %>
+      </div>
+      <div id="product<%= product.id %>where_to_buy" class="hidden content_template">
+        <%= product.where_to_buy %>
+      </div>
+    </div>
+  </div>
+<% end %>
