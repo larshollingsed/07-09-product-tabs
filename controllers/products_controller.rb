@@ -27,5 +27,5 @@ end
 
 get "/modify_product_form2" do
   @product = Product.find(params["product"]["id"])
-  erb :"product/modify_product_form2"
+  erb :"products/modify_product_form2"
 end

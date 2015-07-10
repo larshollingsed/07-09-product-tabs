@@ -1,0 +1,25 @@
+<h2>
+  Modify this product
+</h2>
+
+<form action="product_modify_confirm">
+  <input type="hidden" name="product[id]" value="<%= @product.id %>">
+  <ul>
+    <li>
+      ID - <%= @product.id %>
+    </li>
+    <li>
+      Product name - <input type="text" name="product[product_name]" value="<%= @product.product_name %>">
+    </li>
+    <li>
+      Technical Specs - <input type="text" name="product[technical_specs]" value="<%= @product.technical_specs %>">
+    </li>
+    <li>
+      General Info - <input type="text" name="product[general_info]" value="<%= @product.general_info %>">
+    </li>
+    <li>
+      Where to Buy - <input type="text" name="product[where_to_buy]" value="<%= @product.where_to_buy %>">
+    </li>
+  </ul>
+  <input type="submit">
+</form>
